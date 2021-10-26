@@ -9,7 +9,9 @@ Custom extension to support anisotropy factor and anisotropic rotation/direction
 --------------
 Export anisotropy factor and texture from PBS materials supported by cycles
 
-Install plugin in blender by going to Preferences -> Addons -> Import
+To install, put the plugin directory in the addons folder of your blender installation.
+
+For Mac its `/Applications/Blender.app/Contents/Resources/2.92/scripts/addons`
 
 [Threejs Import](threejs_anisotropy/)
 --------------

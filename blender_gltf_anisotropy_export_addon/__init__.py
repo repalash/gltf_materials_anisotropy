@@ -96,6 +96,7 @@ class GLTF_PT_AnisotropyExtensionPanel(bpy.types.Panel):
         box.label(text=props.extension_name)
 
         layout.prop(props, 'extension_name', text="GLTF extension name")
+        layout.prop(props, 'directional_map_flag', text="Directional flag")
 
 
 class glTF2ExportUserExtension:
@@ -107,9 +108,7 @@ class glTF2ExportUserExtension:
         self.Extension = Extension
         self.properties = bpy.context.scene.AnisotropyExtensionProperties
 
-
     def gather_material_hook(self, gltf2_material, blender_material, export_settings):
-
 
         def __has_image_node_from_socket(socket):
             result = gltf2_blender_search_node_tree.from_socket(
